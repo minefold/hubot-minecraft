@@ -139,8 +139,6 @@ class exports.Parser
       console.log @buf
       process.exit(1)
 
-    # console.log ' |', Protocol.LABELS[header]
-
     payload = for fieldType in schema
       @["read#{fieldType}"]()
 

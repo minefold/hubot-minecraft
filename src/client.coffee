@@ -75,8 +75,6 @@ class exports.Client extends events.EventEmitter
 
                   @emit 'connect', @
 
-
-
                 # Echos the 0x0D packet (needs to happen otherwise server fucks out)
                 @once 'player position and look', (x, stance, y, z, yaw, pitch, grounded) =>
                   @writepacket 0x0D, arguments...
@@ -87,14 +85,9 @@ class exports.Client extends events.EventEmitter
 
     packet = new Packet(header)
 
-    # console.log '->', Protocol.LABELS[header]
-
     @conn.write packet.build(payload...), callback
 
   addData: (data) ->
-    # console.log " *", data.length, 'bytes'
-    # console.log "\n", data, "\n"
-
     # If data already exists, add this new stuff
     @packet = if @packet?
       p = new Buffer(@packet.length + data.length)
@@ -121,7 +114,6 @@ class exports.Client extends events.EventEmitter
       @emit event, payload...
 
       @parsePacket() if @packet?
-
 
     # An error parsing means the data crosses over two packets and we need to try again when another packet comes in.
     catch e
