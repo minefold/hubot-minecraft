@@ -1,0 +1,18 @@
+{
+  "author": "Chris Lloyd <chris@minefold.com>",
+  "name": "hubot-minecraft",
+  "description": "Minecraft adapter for hubot",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/minefold/hubot-minecraft.git"
+  },
+  "main": "./src/minecraft",
+  "engines": {
+    "node": "~0.6.6"
+  },
+  "dependencies": {
+    "iconv": "~1.1.3",
+    "node-int64": "~0.3.0"
+  }
+}
