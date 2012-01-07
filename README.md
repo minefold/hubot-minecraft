@@ -6,6 +6,9 @@ This adapter will connect your Hubot instance to a Mincraft server. You'll need 
 
 This adapter is **BETA**. It contains what we think is a pretty complete implementation of the Minecraft protocol, but there are definitely cases that it can't handle.
 
+![Marvin](http://f.cl.ly/items/3v47303S1W2O2Z1V060Q/Screen%20Shot%202012-01-06%20at%204.53.57%20PM.png)
+
+or check out a [quick video](http://www.youtube.com/watch?v=-XWtZmYtQcE) of it in action.
 
 ## Configuring the Adapter
 
